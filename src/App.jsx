@@ -21,7 +21,7 @@ function App() {
           <a className='text-gray-300 text-lg' href="#trailhead">Trailhead</a>
           <RiMenu3Fill  onClick={() => {setIsMenuClick(true)}} className='cursor-pointer text-gray-300 text-3xl'/>
         </nav>
-        {isMenuClick ? <div className="modal fixed m-auto bg-gray-700 w-1/2 top-1/2 left-1/2 trans">ola <IoCloseSharp onClick={() => {setIsMenuClick(false)}}/></div> : null }
+        {isMenuClick ? <IoCloseSharp onClick={() => {setIsMenuClick(false)}}/> : null }
       </header>
       <main className='flex justify-center items-center gap-32 flex-wrap mt-28'>
         <section className='flex flex-col w-[620px] items-center'>
