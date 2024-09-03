@@ -16,15 +16,15 @@ function App() {
           <h2 className='font-bold text-3xl font-mono text-white'>Anderson Dev</h2>
         </div>
         <nav className='flex gap-6 items-center'>
-          <a className='text-gray-300 text-lg' href="#home">Home</a>
-          <a className='text-gray-300 text-lg' href="#about">About</a>
-          <a className='text-gray-300 text-lg' href="#trailhead">Trailhead</a>
+          <a className='text-gray-300 text-lg hidden lg:block' href="#home">Home</a>
+          <a className='text-gray-300 text-lg hidden lg:block' href="#about">About</a>
+          <a className='text-gray-300 text-lg hidden lg:block' href="#trailhead">Trailhead</a>
           <RiMenu3Fill  onClick={() => {setIsMenuClick(true)}} className='cursor-pointer text-gray-300 text-3xl'/>
         </nav>
         {isMenuClick ? <IoCloseSharp onClick={() => {setIsMenuClick(false)}}/> : null }
       </header>
-      <main className='flex justify-center items-center gap-32 flex-wrap mt-28'>
-        <section className='flex flex-col w-[620px] items-center'>
+      <main className='flex justify-center items-center gap-8 xl:gap-32 flex-wrap mt-28 px-6'>
+        <section className='flex flex-col 2xl:w-[600px] items-center lg:w-[1024px] md:w-full xl:w-[580px]'>
           <div>
             <h1 className='font-bold text-6xl font-mono text-white text-left m-h'>Nice to meet you,<br></br>I'm Anderson Carvalho</h1>
             <p className='text-gray-300 mt-4 text-lg'>Sou um entusiasta em tecnologia com uma paixão por computadores que começou desde os 3 anos de idade, 
@@ -39,8 +39,8 @@ function App() {
             <a href="https://github.com/AndersonCarvalhoo" target='_blank'><FaGithub className='text-white text-4xl'/></a>
           </div>
         </section>
-        <picture className='w-[600px] flex justify-center'>
-          <img src={perfilImage} alt="" className='rounded-full h-[600px]'/>
+        <picture className='2xl:w-[600px] flex justify-center md:w-[500px] lg:w-[600px] xl:w-[500px] w-[400px] '>
+          <img src={perfilImage} alt="" className='rounded-full'/>
         </picture>
       </main>
     </>
