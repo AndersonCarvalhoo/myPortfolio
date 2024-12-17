@@ -18,8 +18,6 @@ function App() {
   function sendEmail(e) {
     e.preventDefault();
 
-    alert("Teste");
-
     const templateParams = {
       from_name: nameInputForm,
       message: messageInputForm,
