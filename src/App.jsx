@@ -7,6 +7,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaSalesforce } from "react-icons/fa";
 import perfilImage from "./assets/perfilImage.jpeg";
 
+import emailjs from "@emailjs/browser";
+
 function App() {
   const [nameInputForm, setNameInputForm] = useState("");
   const [emailInputForm, setEmailInputForm] = useState("");
@@ -17,6 +19,34 @@ function App() {
     e.preventDefault();
 
     alert("Teste");
+
+    const templateParams = {
+      from_name: nameInputForm,
+      message: messageInputForm,
+      email: emailInputForm,
+    };
+    emailjs
+      .send(
+        "service_pvwk6iq",
+        "template_l14aolt",
+        templateParams,
+        "9s7VcliTuoMiLv-Qc"
+      )
+      .then(
+        (response) => {
+          alert("Email enviado", response.status, response.text);
+          clearInputForm();
+        },
+        (err) => {
+          alert("o Email não foi enviado", err);
+        }
+      );
+  }
+
+  function clearInputForm() {
+    setNameInputForm("");
+    setEmailInputForm("");
+    setMessageInputForm("");
   }
 
   return (
@@ -105,7 +135,7 @@ function App() {
             type="text"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Digite seu nome"
-            onClick={(event) => {
+            onChange={(event) => {
               setNameInputForm(event.target.value);
             }}
             value={nameInputForm}
@@ -115,7 +145,7 @@ function App() {
             type="email"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Digite seu email"
-            onClick={(event) => {
+            onChange={(event) => {
               setEmailInputForm(event.target.value);
             }}
             value={emailInputForm}
@@ -128,13 +158,15 @@ function App() {
             className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Digite sua mensagem..."
             rows={6}
-            onClick={(event) => {
+            onChange={(event) => {
               setMessageInputForm(event.target.value);
             }}
             value={messageInputForm}
             required
           ></textarea>
-          <button>teste</button>
+          <button className="bg-sky-950 rounded-md p-1 text-white text-lg">
+            Enviar email
+          </button>
         </form>
       </section>
     </>
