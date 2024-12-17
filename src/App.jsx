@@ -39,6 +39,7 @@ function App() {
         },
         (err) => {
           alert("o Email não foi enviado", err);
+          clearInputForm();
         }
       );
   }
