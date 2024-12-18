@@ -42,7 +42,7 @@ export default function About() {
           </a>
         </div>
       </section>
-      <picture className="2xl:w-[600px] flex justify-center md:w-[500px] lg:w-[600px] xl:w-[500px] w-[400px] ">
+      <picture className="2xl:w-[600px] flex justify-center md:w-[500px] lg:w-[600px] xl:w-[500px] w-[342px] ">
         <img src={perfilImage} alt="" className="rounded-full" />
       </picture>
     </main>
