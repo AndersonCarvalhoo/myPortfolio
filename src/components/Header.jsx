@@ -5,21 +5,22 @@ import { RiMenu3Fill } from "react-icons/ri";
 export default function Header() {
   const [isMenuClick, setIsMenuClick] = useState(false);
   return (
-    <header className="h-10 w-full flex justify-between px-20">
-      <div className="logo">
-        <h2 className="font-bold text-3xl font-mono text-white">
-          Anderson Dev
-        </h2>
-      </div>
-      <nav className="flex gap-6 items-center">
-        <a className="text-gray-300 text-lg hidden lg:block" href="#home">
-          Home
+    <header className="h-20 w-full flex justify-evenly px-20 shadow-2xl">
+      <nav className="flex justify-evenly items-center w-full">
+        <a
+          className="text-gray-300 text-lg font-bold hidden lg:block font-main tracking-wide"
+          href="#contact"
+        >
+          Contact
         </a>
-        <a className="text-gray-300 text-lg hidden lg:block" href="#about">
+        <a
+          className="text-gray-300 text-lg font-bold hidden lg:block font-main tracking-wide"
+          href="#about"
+        >
           About
         </a>
         <a
-          className="text-gray-300 text-lg hidden lg:block"
+          className="text-gray-300 text-lg font-bold hidden lg:block font-main tracking-wide"
           href="https://www.salesforce.com/trailblazer/carvalhodev"
           target="_blank"
         >

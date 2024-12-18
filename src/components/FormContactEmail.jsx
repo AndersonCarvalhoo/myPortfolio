@@ -40,7 +40,10 @@ export default function FormContactEmail() {
   }
 
   return (
-    <section className="flex justify-center items-center gap-8 xl:gap-32 flex-wrap px-6 my-20">
+    <section
+      className="flex justify-center items-center gap-8 xl:gap-32 flex-wrap px-6 my-20"
+      id="contact"
+    >
       <form
         onSubmit={sendEmail}
         className="flex flex-col gap-3 w-full lg:w-[600px]"

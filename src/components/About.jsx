@@ -6,7 +6,10 @@ import perfilImage from "../assets/perfilImage.jpeg";
 export default function About() {
   return (
     <main className="flex justify-center items-center gap-8 xl:gap-32 flex-wrap mt-28 px-6">
-      <section className="flex flex-col 2xl:w-[600px] items-center lg:w-[1024px] md:w-full xl:w-[580px]">
+      <section
+        className="flex flex-col 2xl:w-[600px] items-center lg:w-[1024px] md:w-full xl:w-[580px]"
+        id="about"
+      >
         <div>
           <h1 className="font-bold text-6xl font-mono text-white text-left m-h">
             Nice to meet you,<br></br>I'm Anderson Carvalho
