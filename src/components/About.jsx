@@ -29,16 +29,16 @@ export default function About() {
             href="https://www.linkedin.com/in/anderson-carvalho-a34968254/"
             target="_blank"
           >
-            <FaLinkedin className="text-white text-4xl" />
+            <FaLinkedin className="text-white text-4xl hover:text-[#2A508D] transition-colors" />
           </a>
           <a
             href="https://www.salesforce.com/trailblazer/carvalhodev"
             target="_blank"
           >
-            <FaSalesforce className="text-white text-4xl" />
+            <FaSalesforce className="text-white text-4xl hover:text-[#2A508D] transition-colors" />
           </a>
           <a href="https://github.com/AndersonCarvalhoo" target="_blank">
-            <FaGithub className="text-white text-4xl" />
+            <FaGithub className="text-white text-4xl hover:text-[#2A508D] transition-colors" />
           </a>
         </div>
       </section>
